@@ -37,6 +37,21 @@ class PlayerViewController: UIViewController {
         }
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        self.hideControlls()
+    }
+    
+    func hideControlls(){
+        self.videoPlayer.videoPlayerControls.nextButtonHidden = false
+        self.videoPlayer.videoPlayerControls.previousButtonHidden = false
+        self.videoPlayer.videoPlayerControls.playPauseButtonHidden = false
+        self.videoPlayer.videoPlayerControls.resizeButtonHidden = false
+        self.videoPlayer.videoPlayerControls.progressSliderHidden = false
+        self.videoPlayer.videoPlayerControls.progressLoaderHidden = false
+        self.videoPlayer.videoPlayerControls.currentTimeLabelHidden = false
+        self.videoPlayer.videoPlayerControls.lengthLabelHidden = false
+    }
+    
     override var prefersStatusBarHidden: Bool {
         return true
     }

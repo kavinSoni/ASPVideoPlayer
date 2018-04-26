@@ -131,6 +131,16 @@ open class ASPBasicControls: UIView, VideoPlayerControls, VideoPlayerSeekControl
 
     open var nextButtonHidden: Bool = true
     open var previousButtonHidden: Bool = true
+    
+    open var playPauseButtonHidden: Bool = true
+    open var resizeButtonHidden: Bool = true
+    
+    
+    open var progressSliderHidden: Bool = true
+    open var progressLoaderHidden: Bool = true
+    
+    open var currentTimeLabelHidden: Bool = true
+    open var lengthLabelHidden: Bool = true
 }
 
 @IBDesignable final public class ASPVideoPlayerControls: ASPBasicControls {
@@ -167,6 +177,84 @@ open class ASPBasicControls: UIView, VideoPlayerControls, VideoPlayerSeekControl
         }
     }
 
+    
+    
+    /**
+     Sets the visibility of the Play Pause button.
+     */
+    open override var playPauseButtonHidden: Bool {
+        set {
+            playPauseButton.isHidden = newValue
+        }
+        get {
+            return playPauseButton.isHidden
+        }
+    }
+    
+    /**
+     Sets the visibility of the Resize button.
+     */
+    open override var resizeButtonHidden: Bool {
+        set {
+            resizeButton.isHidden = newValue
+        }
+        get {
+            return resizeButton.isHidden
+        }
+    }
+    
+    
+    /**
+     Sets the visibility of the Progress Slider.
+     */
+    open override var progressSliderHidden: Bool {
+        set {
+            progressSlider.isHidden = newValue
+        }
+        get {
+            return progressSlider.isHidden
+        }
+    }
+    
+    
+    /**
+     Sets the visibility of the Progress Loader.
+     */
+    open override var progressLoaderHidden: Bool {
+        set {
+            progressLoader.isHidden = newValue
+        }
+        get {
+            return progressLoader.isHidden
+        }
+    }
+    
+    
+    /**
+     Sets the visibility of the Current Time Label.
+     */
+    open override var currentTimeLabelHidden: Bool {
+        set {
+            currentTimeLabel.isHidden = newValue
+        }
+        get {
+            return currentTimeLabel.isHidden
+        }
+    }
+
+    
+    /**
+     Sets the visibility of the Length Label.
+     */
+    open override var lengthLabelHidden: Bool {
+        set {
+            lengthLabel.isHidden = newValue
+        }
+        get {
+            return lengthLabel.isHidden
+        }
+    }
+    
     /**
      Sets the color of the controls.
      */
