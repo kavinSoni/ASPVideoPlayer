@@ -455,7 +455,7 @@ import AVFoundation
         }) as AnyObject?
     }
 
-    fileprivate func deinitObservers() {
+    func deinitObservers() {
         NotificationCenter.default.removeObserver(self)
         if let video = videoPlayerLayer.player?.currentItem, video.observationInfo != nil {
             video.removeObserver(self, forKeyPath: "status")

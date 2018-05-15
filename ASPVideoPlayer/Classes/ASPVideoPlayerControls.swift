@@ -49,6 +49,8 @@ public protocol VideoPlayerControls {
      - Parameter value: The new volume value.
      */
     func volume(_ value: Float)
+    
+    func deinitObservers()
 }
 
 /**
@@ -93,6 +95,10 @@ public extension VideoPlayerControls {
 
     func stop() {
         videoPlayer?.stopVideo()
+    }
+    
+    func deinitObservers() {
+        videoPlayer?.deinitObservers()
     }
 
     func jumpForward(_ value: Double = 0.05) {
